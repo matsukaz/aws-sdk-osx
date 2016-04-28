@@ -571,8 +571,10 @@ BOOL _identityChanged;
     // Get the FB APP access token
     NSString *raw_response = [NSString stringWithContentsOfURL:[NSURL URLWithString:accessURI] encoding:NSUTF8StringEncoding error:nil];
     NSRange startOfToken = [raw_response rangeOfString:@"="];
+    
     // Strip the 'access_token=' so we can easily encode result
-    _facebookAppToken = [[raw_response substringFromIndex:startOfToken.location + 1] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSCharacterSet *characterSet = [NSCharacterSet URLHostAllowedCharacterSet];
+    _facebookAppToken = [[raw_response substringFromIndex:startOfToken.location + 1] stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
 
     // Add a new test user, the result contains an access key we can use to test assume role
     NSString *addUserURI = [NSString stringWithFormat:@"https://graph.facebook.com/%@/accounts/test-users?installed=true&name=Foo%%20Bar&locale=en_US&permissions=read_stream&method=post&access_token=%@", AWSCognitoCredentialsProviderTestsFacebookAppID, _facebookAppToken];
@@ -596,10 +598,14 @@ BOOL _identityChanged;
 }
 
 + (void)deleteFBAccount {
-    NSString *deleteURI = [NSString stringWithFormat:@"https://graph.facebook.com/%@?method=delete&access_token=%@", _facebookId, [_facebookAppToken stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:deleteURI]]
-                          returningResponse:nil
-                                      error:nil];
+    NSCharacterSet *characterSet = [NSCharacterSet URLHostAllowedCharacterSet];
+    NSString *deleteURI = [NSString stringWithFormat:@"https://graph.facebook.com/%@?method=delete&access_token=%@", _facebookId, [_facebookAppToken stringByAddingPercentEncodingWithAllowedCharacters:characterSet]];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:deleteURI]];
+    [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+    }];
 }
 
 + (void)createIdentityPools {

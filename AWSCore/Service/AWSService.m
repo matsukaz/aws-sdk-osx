@@ -15,7 +15,7 @@
 
 #import "AWSService.h"
 
-#import <UIKit/UIKit.h>
+#import <Cocoa/Cocoa.h>
 #import "AWSSynchronizedMutableDictionary.h"
 #import "AWSURLResponseSerialization.h"
 #import "AWSLogging.h"
@@ -35,28 +35,28 @@ static NSString *const AWSServiceConfigurationUnknown = @"Unknown";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _errorCodeDictionary = @{
-                                @"RequestTimeTooSkewed" : @(AWSServiceErrorRequestTimeTooSkewed),
-                                @"InvalidSignatureException" : @(AWSServiceErrorInvalidSignatureException),
-                                @"RequestExpired" : @(AWSServiceErrorRequestExpired),
-                                @"SignatureDoesNotMatch" : @(AWSServiceErrorSignatureDoesNotMatch),
-                                @"AuthFailure" : @(AWSServiceErrorAuthFailure),
-                                @"AccessDeniedException" : @(AWSServiceErrorAccessDeniedException),
-                                @"UnrecognizedClientException" : @(AWSServiceErrorUnrecognizedClientException),
-                                @"IncompleteSignature" : @(AWSServiceErrorIncompleteSignature),
-                                @"InvalidClientTokenId" : @(AWSServiceErrorInvalidClientTokenId),
-                                @"MissingAuthenticationToken" : @(AWSServiceErrorMissingAuthenticationToken),
-                                @"AccessDenied" : @(AWSServiceErrorAccessDenied),
-                                @"ExpiredToken" : @(AWSServiceErrorExpiredToken),
-                                @"InvalidAccessKeyId" : @(AWSServiceErrorInvalidAccessKeyId),
-                                @"InvalidToken" : @(AWSServiceErrorInvalidToken),
-                                @"TokenRefreshRequired" : @(AWSServiceErrorTokenRefreshRequired),
-                                @"AccessFailure" : @(AWSServiceErrorAccessFailure),
-                                @"AuthMissingFailure" : @(AWSServiceErrorAuthMissingFailure),
-                                @"Throttling" : @(AWSServiceErrorThrottling),
-                                @"ThrottlingException" : @(AWSServiceErrorThrottlingException),
-                                };
+                                 @"RequestTimeTooSkewed" : @(AWSServiceErrorRequestTimeTooSkewed),
+                                 @"InvalidSignatureException" : @(AWSServiceErrorInvalidSignatureException),
+                                 @"RequestExpired" : @(AWSServiceErrorRequestExpired),
+                                 @"SignatureDoesNotMatch" : @(AWSServiceErrorSignatureDoesNotMatch),
+                                 @"AuthFailure" : @(AWSServiceErrorAuthFailure),
+                                 @"AccessDeniedException" : @(AWSServiceErrorAccessDeniedException),
+                                 @"UnrecognizedClientException" : @(AWSServiceErrorUnrecognizedClientException),
+                                 @"IncompleteSignature" : @(AWSServiceErrorIncompleteSignature),
+                                 @"InvalidClientTokenId" : @(AWSServiceErrorInvalidClientTokenId),
+                                 @"MissingAuthenticationToken" : @(AWSServiceErrorMissingAuthenticationToken),
+                                 @"AccessDenied" : @(AWSServiceErrorAccessDenied),
+                                 @"ExpiredToken" : @(AWSServiceErrorExpiredToken),
+                                 @"InvalidAccessKeyId" : @(AWSServiceErrorInvalidAccessKeyId),
+                                 @"InvalidToken" : @(AWSServiceErrorInvalidToken),
+                                 @"TokenRefreshRequired" : @(AWSServiceErrorTokenRefreshRequired),
+                                 @"AccessFailure" : @(AWSServiceErrorAccessFailure),
+                                 @"AuthMissingFailure" : @(AWSServiceErrorAuthMissingFailure),
+                                 @"Throttling" : @(AWSServiceErrorThrottling),
+                                 @"ThrottlingException" : @(AWSServiceErrorThrottlingException),
+                                 };
     });
-
+    
     return _errorCodeDictionary;
 }
 
@@ -78,7 +78,7 @@ static NSString *const AWSServiceConfigurationUnknown = @"Unknown";
     dispatch_once(&onceToken, ^{
         _defaultServiceManager = [AWSServiceManager new];
     });
-
+    
     return _defaultServiceManager;
 }
 
@@ -123,7 +123,7 @@ static NSString *const AWSServiceConfigurationUnknown = @"Unknown";
         _regionType = regionType;
         _credentialsProvider = credentialsProvider;
     }
-
+    
     return self;
 }
 
@@ -131,11 +131,11 @@ static NSString *const AWSServiceConfigurationUnknown = @"Unknown";
     static NSString *_userAgent = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString *systemName = [[[UIDevice currentDevice] systemName] stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+        NSString *systemName = [[[NSProcessInfo processInfo] operatingSystemVersionString] stringByReplacingOccurrencesOfString:@" " withString:@"-"];
         if (!systemName) {
             systemName = AWSServiceConfigurationUnknown;
         }
-        NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
+        NSString *systemVersion = [[NSProcessInfo processInfo] operatingSystemVersionString];
         if (!systemVersion) {
             systemVersion = AWSServiceConfigurationUnknown;
         }
@@ -145,12 +145,12 @@ static NSString *const AWSServiceConfigurationUnknown = @"Unknown";
         }
         _userAgent = [NSString stringWithFormat:@"aws-sdk-iOS/%@ %@/%@ %@", AWSiOSSDKVersion, systemName, systemVersion, localeIdentifier];
     });
-
+    
     NSMutableString *userAgent = [NSMutableString stringWithString:_userAgent];
     for (NSString *prefix in _globalUserAgentPrefixes) {
         [userAgent appendFormat:@" %@", prefix];
     }
-
+    
     return [NSString stringWithString:userAgent];
 }
 
@@ -162,7 +162,7 @@ static NSMutableArray *_globalUserAgentPrefixes = nil;
         dispatch_once(&onceToken, ^{
             _globalUserAgentPrefixes = [NSMutableArray new];
         });
-
+        
         if (![_globalUserAgentPrefixes containsObject:productToken]) {
             [_globalUserAgentPrefixes addObject:productToken];
         }
@@ -174,7 +174,7 @@ static NSMutableArray *_globalUserAgentPrefixes = nil;
     for (NSString *prefix in self.userAgentProductTokens) {
         [userAgent appendFormat:@" %@", prefix];
     }
-
+    
     return [NSString stringWithString:userAgent];
 }
 
@@ -275,7 +275,7 @@ static NSString *const AWSServiceNameSTS = @"sts";
                       useUnsafeURL:useUnsafeURL];
         _hostName = [_URL host];
     }
-
+    
     return self;
 }
 
@@ -291,7 +291,7 @@ static NSString *const AWSServiceNameSTS = @"sts";
         _URL = URL;
         _hostName = [_URL host];
     }
-
+    
     return self;
 }
 
@@ -383,7 +383,7 @@ static NSString *const AWSServiceNameSTS = @"sts";
              serviceName:(NSString *)serviceName
             useUnsafeURL:(BOOL)useUnsafeURL {
     NSURL *URL = nil;
-
+    
     NSString *separator = @".";
     if (serviceType == AWSServiceS3
         && (regionType == AWSRegionUSEast1
@@ -398,12 +398,12 @@ static NSString *const AWSServiceNameSTS = @"sts";
             || regionType == AWSRegionUSGovWest1)) {
             separator = @"-";
         }
-
+    
     NSString *HTTPType = @"https";
     if (useUnsafeURL) {
         HTTPType = @"http";
     }
-
+    
     if (serviceType == AWSServiceS3 && regionType == AWSRegionUSEast1) {
         URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@://s3.amazonaws.com", HTTPType]];
     } else if (serviceType == AWSServiceSTS) {
@@ -423,7 +423,7 @@ static NSString *const AWSServiceNameSTS = @"sts";
     } else {
         URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@%@%@.amazonaws.com", HTTPType, serviceName, separator, regionName]];
     }
-
+    
     //need to add ".cn" at end of URL if it is in China Region
     if ([regionName hasPrefix:@"cn"]) {
         NSString *urlString = [URL absoluteString];

@@ -14,7 +14,7 @@
 //
 
 #import "AWSClientContext.h"
-#import <UIKit/UIKit.h>
+#import <Cocoa/Cocoa.h>
 #import <sys/types.h>
 #import <sys/sysctl.h>
 #import "AWSUICKeyChainStore.h"
@@ -53,32 +53,32 @@ static NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazona
         if (_installationId == nil) {
             AWSLogError(@"Failed to generate installation_id");
         }
-
+        
         NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
         NSString *appBuild = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
         NSString *appPackageName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
         NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-
+        
         //App details
         _appVersion = appVersion ? appVersion : AWSClientContextUnknown;
         _appBuild = appBuild ? appBuild : AWSClientContextUnknown;
         _appPackageName = appPackageName ? appPackageName : AWSClientContextUnknown;
         _appName = appName ? appName : AWSClientContextUnknown;
-
+        
         //Device Details
-        UIDevice* currentDevice = [UIDevice currentDevice];
+        NSString *osVersionString = [[NSProcessInfo processInfo] operatingSystemVersionString];
         NSString *autoUpdatingLoaleIdentifier = [[NSLocale autoupdatingCurrentLocale] localeIdentifier];
-        _devicePlatform = [currentDevice systemName] ? [currentDevice systemName] : AWSClientContextUnknown;
-        _deviceModel = [currentDevice model] ? [currentDevice model] : AWSClientContextUnknown;
+        _devicePlatform = osVersionString ? osVersionString : AWSClientContextUnknown;
+        _deviceModel = [[NSProcessInfo processInfo] operatingSystemVersionString] ? [[NSProcessInfo processInfo] operatingSystemVersionString] : AWSClientContextUnknown;
         _deviceModelVersion = [self deviceModelVersionCode] ? [self deviceModelVersionCode] : AWSClientContextUnknown;
-        _devicePlatformVersion = [currentDevice systemVersion] ? [currentDevice systemVersion] : AWSClientContextUnknown;
+        _devicePlatformVersion = osVersionString ? osVersionString : AWSClientContextUnknown;
         _deviceManufacturer = @"apple";
         _deviceLocale = autoUpdatingLoaleIdentifier ? autoUpdatingLoaleIdentifier : AWSClientContextUnknown;
-
+        
         _customAttributes = @{};
         _serviceDetails = [NSMutableDictionary new];
     }
-
+    
     return self;
 }
 
@@ -88,20 +88,20 @@ static NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazona
                                     @"app_version_name": self.appBuild,
                                     @"app_version_code": self.appVersion,
                                     @"app_title": self.appName};
-
+    
     NSDictionary *deviceDetails = @{@"model": self.deviceModel,
                                     @"model_version": self.deviceModelVersion,
                                     @"make": self.deviceManufacturer,
                                     @"platform": self.devicePlatform,
                                     @"platform_version": self.devicePlatformVersion,
                                     @"locale": self.deviceLocale};
-
+    
     NSDictionary *clientContext = @{@"version": AWSClientContextVersion,
                                     @"client": clientDetails,
                                     @"env": deviceDetails,
                                     @"custom": self.customAttributes,
                                     @"services": self.serviceDetails};
-
+    
     return clientContext;
 }
 
@@ -114,7 +114,7 @@ static NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazona
     if (!JSONData) {
         AWSLogError(@"Failed to serialize JSON Data. [%@]", error);
     }
-
+    
     return [[NSString alloc] initWithData:JSONData
                                  encoding:NSUTF8StringEncoding];
 }
@@ -186,13 +186,13 @@ static NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazona
     int mib[2];
     size_t len;
     char *machine;
-
+    
     mib[0] = CTL_HW;
     mib[1] = HW_MACHINE;
     sysctl(mib, 2, NULL, &len, NULL, 0);
     machine = malloc(len);
     sysctl(mib, 2, machine, &len, NULL, 0);
-
+    
     NSString *modelVersionCode = [NSString stringWithCString:machine encoding:NSASCIIStringEncoding];
     free(machine);
     return modelVersionCode;

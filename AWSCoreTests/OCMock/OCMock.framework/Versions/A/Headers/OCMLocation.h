@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2014-2015 Erik Doernenburg and contributors
+ *  Copyright (c) 2014-2016 Erik Doernenburg and contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use these files except in compliance with the License. You may obtain
@@ -15,25 +15,24 @@
  */
 
 #import <Foundation/Foundation.h>
-
-@class OCMockObject;
-@class OCMInvocationMatcher;
+#import "OCMFunctions.h"
 
 
-@interface OCMRecorder : NSProxy
+@interface OCMLocation : NSObject
 {
-    OCMockObject         *mockObject;
-    OCMInvocationMatcher *invocationMatcher;
+    id          testCase;
+    NSString    *file;
+    NSUInteger  line;
 }
 
-- (instancetype)init;
-- (instancetype)initWithMockObject:(OCMockObject *)aMockObject;
++ (instancetype)locationWithTestCase:(id)aTestCase file:(NSString *)aFile line:(NSUInteger)aLine;
 
-- (void)setMockObject:(OCMockObject *)aMockObject;
+- (instancetype)initWithTestCase:(id)aTestCase file:(NSString *)aFile line:(NSUInteger)aLine;
 
-- (OCMInvocationMatcher *)invocationMatcher;
-
-- (id)classMethod;
-- (id)ignoringNonObjectArgs;
+- (id)testCase;
+- (NSString *)file;
+- (NSUInteger)line;
 
 @end
+
+OCMOCK_EXTERN OCMLocation *OCMMakeLocation(id testCase, const char *file, int line);

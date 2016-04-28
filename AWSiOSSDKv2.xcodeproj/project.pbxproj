@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2763FDED1CD257DA00B8C530 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2763FDEC1CD257DA00B8C530 /* OCMock.framework */; };
+		2763FDF41CD25D9A00B8C530 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2763FDF31CD25D9A00B8C530 /* OCMock.framework */; };
 		CE0D41701C6A66E5006B91B5 /* AWSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D416F1C6A66E5006B91B5 /* AWSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE0D417C1C6A66E5006B91B5 /* AWSCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0D417B1C6A66E5006B91B5 /* AWSCoreTests.m */; };
 		CE0D42231C6A673E006B91B5 /* AWSCredentialsProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D41851C6A673E006B91B5 /* AWSCredentialsProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -152,7 +154,6 @@
 		CE2D37521C6E7FA300834EE7 /* AWSAPIGateway.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE9DEB1E1C6A81160060793F /* AWSAPIGateway.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE5603E01C6BC7C700B4E00B /* AWSGeneralCognitoIdentityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5603DE1C6BC7C700B4E00B /* AWSGeneralCognitoIdentityTests.m */; };
 		CE5603E11C6BC7C700B4E00B /* AWSGeneralSTSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5603DF1C6BC7C700B4E00B /* AWSGeneralSTSTests.m */; };
-		CE5603E21C6BC80A00B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
 		CE5603E41C6BC82E00B4E00B /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8EF2E1C6A69A00098B15B /* AWSTestUtility.m */; };
 		CE5603F51C6BC89E00B4E00B /* AWSAPIGatewayUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5603F41C6BC89E00B4E00B /* AWSAPIGatewayUnitTests.m */; };
 		CE5604E61C6BCA9100B4E00B /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8EF2E1C6A69A00098B15B /* AWSTestUtility.m */; };
@@ -171,23 +172,6 @@
 		CE5604F31C6BCAA100B4E00B /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8EF2E1C6A69A00098B15B /* AWSTestUtility.m */; };
 		CE5604F41C6BCAA300B4E00B /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8EF2E1C6A69A00098B15B /* AWSTestUtility.m */; };
 		CE5604F51C6BCAA400B4E00B /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8EF2E1C6A69A00098B15B /* AWSTestUtility.m */; };
-		CE5604F61C6BCAAA00B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5604F71C6BCAAC00B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5604F81C6BCAAC00B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5604F91C6BCAAE00B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5604FA1C6BCAAF00B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5604FB1C6BCAB000B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5604FC1C6BCAB000B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5604FD1C6BCAB200B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5604FE1C6BCAB300B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5604FF1C6BCAB400B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5605001C6BCAB500B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5605011C6BCAB600B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5605021C6BCAB700B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5605031C6BCABA00B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5605041C6BCABB00B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5605051C6BCABC00B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE5605061C6BCABD00B4E00B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
 		CE5605191C6BCB6300B4E00B /* AWSGeneralAutoScalingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5605181C6BCB6300B4E00B /* AWSGeneralAutoScalingTests.m */; };
 		CE56051B1C6BCB8800B4E00B /* AWSGeneralCloudWatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE56051A1C6BCB8800B4E00B /* AWSGeneralCloudWatchTests.m */; };
 		CE56051D1C6BCBB700B4E00B /* AWSGeneralCognitoSyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE56051C1C6BCBB700B4E00B /* AWSGeneralCognitoSyncTests.m */; };
@@ -222,8 +206,6 @@
 		CE9DE5691C6A74FC0060793F /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = CEB8EF3E1C6A69AB0098B15B /* credentials.json */; };
 		CE9DE56A1C6A752A0060793F /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8EF2E1C6A69A00098B15B /* AWSTestUtility.m */; };
 		CE9DE5871C6A76550060793F /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8EF2E1C6A69A00098B15B /* AWSTestUtility.m */; };
-		CE9DE5881C6A76780060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DE5891C6A76790060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
 		CE9DE5921C6A76E70060793F /* AWSDynamoDBModel.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9DE58A1C6A76E70060793F /* AWSDynamoDBModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE9DE5931C6A76E70060793F /* AWSDynamoDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9DE58B1C6A76E70060793F /* AWSDynamoDBModel.m */; };
 		CE9DE5941C6A76E70060793F /* AWSDynamoDBObjectMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9DE58C1C6A76E70060793F /* AWSDynamoDBObjectMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -565,20 +547,6 @@
 		CE9DEB4A1C6A9C0D0060793F /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8EF2E1C6A69A00098B15B /* AWSTestUtility.m */; };
 		CE9DEB4B1C6A9C0E0060793F /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8EF2E1C6A69A00098B15B /* AWSTestUtility.m */; };
 		CE9DEB4C1C6A9C0F0060793F /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8EF2E1C6A69A00098B15B /* AWSTestUtility.m */; };
-		CE9DEB4D1C6A9C240060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DEB4E1C6A9C260060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DEB4F1C6A9C280060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DEB501C6A9C290060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DEB511C6A9C2A0060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DEB521C6A9C2B0060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DEB531C6A9C2D0060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DEB541C6A9C2E0060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DEB551C6A9C2F0060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DEB561C6A9C300060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DEB571C6A9C310060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DEB581C6A9C320060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DEB591C6A9C330060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CE9DEB5A1C6A9C350060793F /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
 		CE9DEB771C6A9F580060793F /* AWSCloudWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9DEB621C6A9F3D0060793F /* AWSCloudWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE9DEB7E1C6A9F8A0060793F /* AWSCloudWatchModel.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9DEB781C6A9F8A0060793F /* AWSCloudWatchModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE9DEB7F1C6A9F8A0060793F /* AWSCloudWatchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9DEB791C6A9F8A0060793F /* AWSCloudWatchModel.m */; };
@@ -627,7 +595,6 @@
 		CE9E50951C72C21400B60FD7 /* TestConnectivity.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9E506C1C72C21400B60FD7 /* TestConnectivity.m */; };
 		CE9E50961C72C21400B60FD7 /* TestEventObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9E506F1C72C21400B60FD7 /* TestEventObserver.m */; };
 		CE9E50971C72C21400B60FD7 /* TestInsightsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9E50711C72C21400B60FD7 /* TestInsightsContext.m */; };
-		CE9E50981C72C28300B60FD7 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
 		CE9E50991C72C2B600B60FD7 /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8EF2E1C6A69A00098B15B /* AWSTestUtility.m */; };
 		CE9E509A1C72C3B500B60FD7 /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = CEB8EF3E1C6A69AB0098B15B /* credentials.json */; };
 		CEA316A71C93A0EA002A9F58 /* AWSCognitoSignInTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA316A61C93A0EA002A9F58 /* AWSCognitoSignInTests.m */; };
@@ -638,8 +605,6 @@
 		CEA316CD1C93A468002A9F58 /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = CEB8EF3E1C6A69AB0098B15B /* credentials.json */; };
 		CEA316CF1C93A49D002A9F58 /* AWSCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE0D416D1C6A66E5006B91B5 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEA316D01C93A49E002A9F58 /* AWSCognitoIdentityProvider.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CEA316981C93A0EA002A9F58 /* AWSCognitoIdentityProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CEA316D11C93A4B8002A9F58 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
-		CEA316D21C93A4B8002A9F58 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
 		CEA316D41C93A9C2002A9F58 /* AWSGeneralCognitoSignInTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA316D31C93A9C2002A9F58 /* AWSGeneralCognitoSignInTests.m */; };
 		CEA33FB41C8A37230083D6BC /* FABAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA33FB01C8A37230083D6BC /* FABAttributes.h */; };
 		CEA33FB51C8A37230083D6BC /* FABKitProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA33FB11C8A37230083D6BC /* FABKitProtocol.h */; };
@@ -676,7 +641,6 @@
 		CEB8EF511C6A69AB0098B15B /* rest-json-output.json in Resources */ = {isa = PBXBuildFile; fileRef = CEB8EF461C6A69AB0098B15B /* rest-json-output.json */; };
 		CEB8EF521C6A69AB0098B15B /* rest-xml-input.json in Resources */ = {isa = PBXBuildFile; fileRef = CEB8EF471C6A69AB0098B15B /* rest-xml-input.json */; };
 		CEB8EF531C6A69AB0098B15B /* rest-xml-output.json in Resources */ = {isa = PBXBuildFile; fileRef = CEB8EF481C6A69AB0098B15B /* rest-xml-output.json */; };
-		CEB8EF601C6A6A2E0098B15B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
 		CECBE12A1C6E913D00B1291D /* AWSCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE0D416D1C6A66E5006B91B5 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CECBE12B1C6E914400B1291D /* AWSAutoScaling.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE9DE5341C6A72960060793F /* AWSAutoScaling.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CECBE12D1C6E915500B1291D /* AWSCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE0D416D1C6A66E5006B91B5 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -711,7 +675,6 @@
 		CECBE1581C6E924800B1291D /* AWSSQS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE9DEA8D1C6A7F460060793F /* AWSSQS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CED218AA1C6ACE660031A8E3 /* AWSDynamoDBTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CED218A91C6ACE660031A8E3 /* AWSDynamoDBTestUtility.m */; };
 		CEFE06541C6AA1C8007A42E4 /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8EF2E1C6A69A00098B15B /* AWSTestUtility.m */; };
-		CEFE06551C6AA1DF007A42E4 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8EF551C6A6A2E0098B15B /* libOCMock.a */; };
 		CEFE06561C6AA249007A42E4 /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = CEB8EF3E1C6A69AB0098B15B /* credentials.json */; };
 		CEFE06571C6AA24A007A42E4 /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = CEB8EF3E1C6A69AB0098B15B /* credentials.json */; };
 		CEFE06581C6AA24D007A42E4 /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = CEB8EF3E1C6A69AB0098B15B /* credentials.json */; };
@@ -1369,6 +1332,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2763FDEC1CD257DA00B8C530 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = /Users/ez/Downloads/OCMock.framework; sourceTree = "<absolute>"; };
+		2763FDF31CD25D9A00B8C530 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = OCMock/OCMock.framework; sourceTree = "<group>"; };
 		CE0D416D1C6A66E5006B91B5 /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0D416F1C6A66E5006B91B5 /* AWSCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSCore.h; sourceTree = "<group>"; };
 		CE0D41711C6A66E5006B91B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -2078,16 +2043,6 @@
 		CEB8EF461C6A69AB0098B15B /* rest-json-output.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "rest-json-output.json"; sourceTree = "<group>"; };
 		CEB8EF471C6A69AB0098B15B /* rest-xml-input.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "rest-xml-input.json"; sourceTree = "<group>"; };
 		CEB8EF481C6A69AB0098B15B /* rest-xml-output.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "rest-xml-output.json"; sourceTree = "<group>"; };
-		CEB8EF551C6A6A2E0098B15B /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
-		CEB8EF571C6A6A2E0098B15B /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
-		CEB8EF581C6A6A2E0098B15B /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
-		CEB8EF591C6A6A2E0098B15B /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
-		CEB8EF5A1C6A6A2E0098B15B /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
-		CEB8EF5B1C6A6A2E0098B15B /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
-		CEB8EF5C1C6A6A2E0098B15B /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
-		CEB8EF5D1C6A6A2E0098B15B /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
-		CEB8EF5E1C6A6A2E0098B15B /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
-		CEB8EF5F1C6A6A2E0098B15B /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
 		CED218A91C6ACE660031A8E3 /* AWSDynamoDBTestUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSDynamoDBTestUtility.m; sourceTree = "<group>"; };
 		CED218AB1C6ACF600031A8E3 /* AWSDynamoDBTestUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSDynamoDBTestUtility.h; sourceTree = "<group>"; };
 		EF1D80031CBC924D007AC243 /* AWSCognitoIdentityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSCognitoIdentityProvider.h; sourceTree = "<group>"; };
@@ -2130,7 +2085,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB8EF601C6A6A2E0098B15B /* libOCMock.a in Frameworks */,
+				2763FDF41CD25D9A00B8C530 /* OCMock.framework in Frameworks */,
+				2763FDED1CD257DA00B8C530 /* OCMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2138,7 +2094,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5603E21C6BC80A00B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2146,7 +2101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5604F61C6BCAAA00B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2154,7 +2108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5604F71C6BCAAC00B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2162,7 +2115,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5604F81C6BCAAC00B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2170,7 +2122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5604F91C6BCAAE00B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2178,7 +2129,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5604FA1C6BCAAF00B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2186,7 +2136,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5604FB1C6BCAB000B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2194,7 +2143,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5604FC1C6BCAB000B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2202,7 +2150,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5604FD1C6BCAB200B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2210,7 +2157,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5604FE1C6BCAB300B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2218,7 +2164,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5604FF1C6BCAB400B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2226,7 +2171,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5605001C6BCAB500B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2234,7 +2178,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5605011C6BCAB600B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2242,7 +2185,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5605021C6BCAB700B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2250,7 +2192,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5605031C6BCABA00B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2258,7 +2199,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5605041C6BCABB00B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2266,7 +2206,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5605051C6BCABC00B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2274,7 +2213,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5605061C6BCABD00B4E00B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2290,7 +2228,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DE5881C6A76780060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2306,7 +2243,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DE5891C6A76790060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2322,7 +2258,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB4F1C6A9C280060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2338,7 +2273,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB501C6A9C290060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2354,7 +2288,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB511C6A9C2A0060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2370,7 +2303,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB521C6A9C2B0060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2386,7 +2318,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB531C6A9C2D0060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2402,7 +2333,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB541C6A9C2E0060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2418,7 +2348,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB551C6A9C2F0060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2434,7 +2363,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB561C6A9C300060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2450,7 +2378,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB571C6A9C310060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2466,7 +2393,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB581C6A9C320060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2482,7 +2408,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB591C6A9C330060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2498,7 +2423,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB5A1C6A9C350060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2515,7 +2439,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB4E1C6A9C260060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2531,7 +2454,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9DEB4D1C6A9C240060793F /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2547,7 +2469,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEFE06551C6AA1DF007A42E4 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2555,7 +2476,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9E50981C72C28300B60FD7 /* libOCMock.a in Frameworks */,
 				CE9E50201C72C19800B60FD7 /* AWSMobileAnalytics.framework in Frameworks */,
 				CE9E50941C72C21400B60FD7 /* OCHamcrestIOS.framework in Frameworks */,
 			);
@@ -2573,7 +2493,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEA316D11C93A4B8002A9F58 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2581,13 +2500,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEA316D21C93A4B8002A9F58 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2763FDF21CD25D7600B8C530 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				2763FDF31CD25D9A00B8C530 /* OCMock.framework */,
+			);
+			name = OCMock;
+			sourceTree = "<group>";
+		};
 		CE0D41531C6A66A9006B91B5 = {
 			isa = PBXGroup;
 			children = (
@@ -2762,7 +2688,7 @@
 				CEB8EF2E1C6A69A00098B15B /* AWSTestUtility.m */,
 				CEB8EF2F1C6A69A00098B15B /* AWSUtilityTests.m */,
 				CE0D417D1C6A66E5006B91B5 /* Info.plist */,
-				CEB8EF541C6A6A2E0098B15B /* OCMock */,
+				2763FDF21CD25D7600B8C530 /* OCMock */,
 				CEB8EF3D1C6A69AB0098B15B /* Resources */,
 			);
 			path = AWSCoreTests;
@@ -4009,31 +3935,6 @@
 				CEB8EF481C6A69AB0098B15B /* rest-xml-output.json */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		CEB8EF541C6A6A2E0098B15B /* OCMock */ = {
-			isa = PBXGroup;
-			children = (
-				CEB8EF551C6A6A2E0098B15B /* libOCMock.a */,
-				CEB8EF561C6A6A2E0098B15B /* OCMock */,
-			);
-			path = OCMock;
-			sourceTree = "<group>";
-		};
-		CEB8EF561C6A6A2E0098B15B /* OCMock */ = {
-			isa = PBXGroup;
-			children = (
-				CEB8EF571C6A6A2E0098B15B /* NSNotificationCenter+OCMAdditions.h */,
-				CEB8EF581C6A6A2E0098B15B /* OCMArg.h */,
-				CEB8EF591C6A6A2E0098B15B /* OCMConstraint.h */,
-				CEB8EF5A1C6A6A2E0098B15B /* OCMLocation.h */,
-				CEB8EF5B1C6A6A2E0098B15B /* OCMMacroState.h */,
-				CEB8EF5C1C6A6A2E0098B15B /* OCMock.h */,
-				CEB8EF5D1C6A6A2E0098B15B /* OCMockObject.h */,
-				CEB8EF5E1C6A6A2E0098B15B /* OCMRecorder.h */,
-				CEB8EF5F1C6A6A2E0098B15B /* OCMStubRecorder.h */,
-			);
-			path = OCMock;
 			sourceTree = "<group>";
 		};
 		EF76F9C41C9A11C900F881D3 /* Internal */ = {
@@ -7439,7 +7340,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amazonaws.sdk.ios.AWSCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Debug;
 		};
@@ -7457,37 +7360,45 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amazonaws.sdk.ios.AWSCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Release;
 		};
 		CE0D41821C6A66E5006B91B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = AWSCoreTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AWSCoreTests/OCMock",
 				);
+				INFOPLIST_FILE = AWSCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/AWSCoreTests/OCMock";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amazonaws.AWSCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Debug;
 		};
 		CE0D41831C6A66E5006B91B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = AWSCoreTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AWSCoreTests/OCMock",
 				);
+				INFOPLIST_FILE = AWSCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/AWSCoreTests/OCMock";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amazonaws.AWSCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Release;
 		};
@@ -7518,6 +7429,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amazonaws.AWSCoreUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -7534,6 +7446,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amazonaws.AWSCoreUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};

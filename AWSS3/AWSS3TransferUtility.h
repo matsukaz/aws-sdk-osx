@@ -13,7 +13,7 @@
 // permissions and limitations under the License.
 //
 
-#import <UIKit/UIKit.h>
+#import <Cocoa/Cocoa.h>
 #import <AWSCore/AWSCore.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -217,9 +217,9 @@ typedef void (^AWSS3TransferUtilityDownloadProgressBlock) (AWSS3TransferUtilityD
  @param identifier        The identifier of the URL session requiring attention.
  @param completionHandler The completion handler to call when you finish processing the events.
  */
-+ (void)interceptApplication:(UIApplication *)application
-handleEventsForBackgroundURLSession:(NSString *)identifier
-           completionHandler:(void (^)())completionHandler;
+//+ (void)interceptApplication:(UIApplication *)application
+//handleEventsForBackgroundURLSession:(NSString *)identifier
+//           completionHandler:(void (^)())completionHandler;
 
 /**
  Saves the `NSData` to a temporary directory and uploads it to the specified Amazon S3 bucket.

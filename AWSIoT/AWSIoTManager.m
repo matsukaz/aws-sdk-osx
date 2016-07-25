@@ -236,10 +236,14 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
     
     if (![AWSIoTKeychain addPublicKeyRef:publicKey tag:publicTag])
     {
+#if os(iOS)
         [AWSIoTKeychain deleteAsymmetricKeysWithPublicTag:publicTag privateTag:privateTag];
         
         AWSLogError(@"Unable to add public key");
         return NO;
+#else
+        AWSLogError(@"Unable to add public key");
+#endif
     }
     
     if(![AWSIoTKeychain addCertificateRef:certRef])
